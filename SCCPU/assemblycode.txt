@@ -1,0 +1,19 @@
+// initialize
+lw $s0, 0($zero)
+lw $s1, 4($zero)
+lw $s2, 8(&zero)
+lw $s3, 16(&zero)
+// working
+add $v0,$s1,$s2
+sub $t0,$s3,$s2
+xori $t0,$s0,2
+bne $s0,$s1,2
+// not working 
+sll $t0,$s0,1
+slti $t0,$s0,-2
+sra $t2,$s1,2
+andi $t4,$t1,3
+multu $s0,$s1
+jalr $s0
+beq $s0,$s0,2
+jal 6

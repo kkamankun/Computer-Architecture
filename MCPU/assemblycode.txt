@@ -1,0 +1,17 @@
+NOP
+BGE $s0 $s0 0x0002
+ADDI $v0 $v0 0x0000
+ADDI $v1 $v1 0x000A
+ADDI $s0 $s0 0x1001
+ANDI $t0 $s0 0x1111
+NOP
+LW $s0 0x0004 $zero
+LWAI $s1 $t1 $t2
+SLTI $at $v0 0x0005
+SLLV $t3 $s0 $at
+BLTZ $v1 0x0001
+jal 0x3 
+xor $t4 $s0 $v1
+ADDI $a1 $a1 0x000A
+NOP
+LBU $a1 0x0000 $a2
